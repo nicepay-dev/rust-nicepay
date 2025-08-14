@@ -2,10 +2,10 @@
 name = "nicepay"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["IT Integration <integration@nicepay.co.id>"]
 description = "A comprehensive Rust SDK for NicePay payment gateway integration"
 license = "MIT"
-repository = "https://github.com/yourusername/rust-nicepay"
+repository = "https://github.com/nicepay-dev/rust-nicepay"
 keywords = ["nicepay", "payment", "gateway", "sdk", "api"]
 categories = ["api-bindings", "web-programming"]
 readme = "README.md"
