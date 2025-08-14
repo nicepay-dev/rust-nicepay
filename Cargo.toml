@@ -1,0 +1,37 @@
+[package]
+name = "nicepay"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A comprehensive Rust SDK for NicePay payment gateway integration"
+license = "MIT"
+repository = "https://github.com/yourusername/rust-nicepay"
+keywords = ["nicepay", "payment", "gateway", "sdk", "api"]
+categories = ["api-bindings", "web-programming"]
+readme = "README.md"
+
+[lib]
+name = "nicepay"
+path = "src/main.rs"
+
+[[bin]]
+name = "nicepay-cli"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+base64 = "0.21"
+sha2 = "0.10"
+hmac = "0.12"
+hex = "0.4"
+thiserror = "1.0"
+openssl = "0.10.73"
+openssl-sys = "0.9.109"
+
+[dev-dependencies]
+tokio-test = "0.4"
