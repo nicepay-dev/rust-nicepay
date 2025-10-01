@@ -11,7 +11,6 @@ pub struct CancelVacctModel {
 }
 
 #[derive(Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
 pub struct AdditionalInfo {
     #[serde(rename = "tXidVA")]
     pub txid_va: String,
