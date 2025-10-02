@@ -1,0 +1,35 @@
+[package]
+name = "rust-nicepay"
+version = "0.1.0"
+edition = "2024"
+authors = ["IT Integration <it@nicepay.co.id>"]
+description = "A Rust library for integrating with Nicepay payment gateway API"
+license = "MIT"
+repository = "https://github.com/nicepay-dev/rust-nicepay"
+homepage = "https://github.com/nicepay-dev/rust-nicepay"
+documentation = "https://docs.nicepay.co.id"
+keywords = ["payment", "nicepay", "gateway", "api", "fintech"]
+readme = "README.md"
+
+[lib]
+name = "rust_nicepay"
+path = "src/lib.rs"
+
+[dependencies]
+base64 = "0.22.1"
+ring = "0.17"
+rsa = "0.9"
+pem = "2.0"
+ssh-key = "0.6.7"
+sha2 = "0.10.9"
+serde = "1.0.226"
+chrono = "0.4.42"
+tokio = { version = "1.47.1", features = ["macros", "rt-multi-thread"] }
+reqwest = { version = "0.12.23", features = ["json"] }
+serde_json = "1.0.145"
+hex = "0.4.3"
+
+
+[dev-dependencies]
+tokio = { version = "1.47.1", features = ["macros", "rt-multi-thread"] }
+reqwest = { version = "0.12.23", features = ["json"] }
