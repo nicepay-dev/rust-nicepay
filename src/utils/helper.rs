@@ -66,4 +66,18 @@ impl Helper {
 
         Ok(general_purpose::STANDARD.encode(signature))
     }
+
+    pub fn generate_merchant_token(
+        i_mid: &str,
+        reference_no: &str,
+        amt: &str,
+        merchant_key: &str,
+    ) -> String {
+        let input = format!("{}{}{}{}", i_mid, reference_no, amt, merchant_key);
+        let hash = Sha256::digest(input.as_bytes());
+        // Nicepay usually expects uppercase hex (check docs)
+        format!("{:x}", hash).to_string()
+    }
+
+
 }

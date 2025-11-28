@@ -1,6 +1,6 @@
 [package]
 name = "rust-nicepay"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["IT Integration <it@nicepay.co.id>"]
 description = "A Rust library for integrating with Nicepay payment gateway API"
@@ -28,8 +28,37 @@ tokio = { version = "1.47.1", features = ["macros", "rt-multi-thread"] }
 reqwest = { version = "0.12.23", features = ["json"] }
 serde_json = "1.0.145"
 hex = "0.4.3"
+anyhow = "1.0.100"
+webbrowser = "0.8"
 
 
 [dev-dependencies]
 tokio = { version = "1.47.1", features = ["macros", "rt-multi-thread"] }
 reqwest = { version = "0.12.23", features = ["json"] }
+
+
+# [[test]]
+# name = "request_redirect_test"
+# path = "tests/services/v1/request_redirect_test.rs"
+
+# [[test]]
+# name = "request_direct_test"
+# path = "tests/services/v1/request_direct_test.rs"
+
+
+#[[test]]
+#name = "request_check_status"
+#path = "tests/services/v1/request_check_status.rs"
+
+#[[test]]
+#name = "request_cancel"
+#path = "tests/services/v1/request_cancel.rs"
+
+# [[test]]
+# name = "request_one_pass_token"
+# path = "tests/services/v1/request_one_pass_token.rs"
+
+#[[test]]
+#name = "secure_ve_request"
+#path = "tests/services/v1/secure_ve_request.rs"
+

@@ -1,6 +1,8 @@
 // use serde::{Debug, Deserialize, Serialize};
 use std::collections::HashMap;
 
+
+#[derive(Debug)]
 pub struct Config {
     pub is_production: bool,
     pub private_key: String,
@@ -89,4 +91,13 @@ impl Config {
             }
         }
     }
+
+    pub fn get_v1_base_url(&self) -> &'static str {
+        if self.is_production {
+            "https://www.nicepay.co.id/nicepay/api"
+        } else {
+            "https://dev.nicepay.co.id/nicepay/api"
+        }
+    }
+    
 }
