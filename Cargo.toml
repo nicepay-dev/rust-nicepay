@@ -1,6 +1,6 @@
 [package]
 name = "rust-nicepay"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["IT Integration <it@nicepay.co.id>"]
 description = "A Rust library for integrating with Nicepay payment gateway API"
